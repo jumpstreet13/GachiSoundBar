@@ -48,6 +48,7 @@ class GachiAdapter(layout: Int) : BaseQuickAdapter<GachiEntity, BaseViewHolder>(
                     val mediaPlayer: MediaPlayer? = item.getMediaPlayer(mContext)
                     mediaPlayer?.seekTo(0)
                     mediaPlayer?.start()
+                    animator?.pause()
                 }
             }
 
