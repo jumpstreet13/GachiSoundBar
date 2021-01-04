@@ -6,11 +6,9 @@ import android.animation.ValueAnimator
 import android.graphics.Color
 import android.widget.TextView
 import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.BaseViewHolder
 import android.media.MediaPlayer
-import android.view.animation.Animation
 import android.widget.ImageView
-import androidx.cardview.widget.CardView
+import com.chad.library.adapter.base.viewholder.BaseViewHolder
 
 
 class GachiAdapter(layout: Int) : BaseQuickAdapter<GachiEntity, BaseViewHolder>(layout) {
@@ -18,9 +16,9 @@ class GachiAdapter(layout: Int) : BaseQuickAdapter<GachiEntity, BaseViewHolder>(
     private val animatorsMap = mutableMapOf<ImageView, ObjectAnimator>()
 
 
-    override fun convert(helper: BaseViewHolder?, item: GachiEntity) {
-        helper?.run {
-            getView<TextView>(R.id.gachiSongName)?.text = item.title
+    override fun convert(helper: BaseViewHolder, item: GachiEntity) {
+        helper.run {
+            getView<TextView>(R.id.gachiSongName).text = item.title
 
             val songContainer = getView<ImageView>(R.id.cardBackground)
             var animator = animatorsMap[songContainer]
@@ -45,7 +43,7 @@ class GachiAdapter(layout: Int) : BaseQuickAdapter<GachiEntity, BaseViewHolder>(
 
             songContainer.setOnClickListener {
                 if (!item.isOnRepeat) {
-                    val mediaPlayer: MediaPlayer? = item.getMediaPlayer(mContext)
+                    val mediaPlayer: MediaPlayer? = item.getMediaPlayer(context)
                     mediaPlayer?.seekTo(0)
                     mediaPlayer?.start()
                     animator?.pause()
@@ -53,7 +51,7 @@ class GachiAdapter(layout: Int) : BaseQuickAdapter<GachiEntity, BaseViewHolder>(
             }
 
             songContainer.setOnLongClickListener {
-                val mediaPlayer: MediaPlayer? = item.getMediaPlayer(mContext)
+                val mediaPlayer: MediaPlayer? = item.getMediaPlayer(context)
                 if (item.isOnRepeat) {
                     mediaPlayer?.isLooping = false
                     item.isOnRepeat = false
