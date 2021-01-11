@@ -30,5 +30,5 @@
 
 
 
-    <dimen name="sound_card_size">150dp</dimen>
+    <dimen name="sound_card_size">100dp</dimen>
 </resources>

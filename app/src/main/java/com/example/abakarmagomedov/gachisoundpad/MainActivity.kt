@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         for (count in fields.indices) {
             Log.i("Raw Asset: ", fields[count].name)
             val field = fields[count]
-            gachiList.add(GachiEntity(field.name, field.getInt(fields[count]), false))
+            gachiList.add(GachiEntity(field.name.apply { replace("_", " ") }, field.getInt(fields[count]), false))
         }
         gachiAdapter.setNewData(gachiList)
     }
