@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GachiSoundPad</string>
+    <string name="long_press_repeat_song">Click - play sound once.\nLong click - repeat sound.\nUpdates will be available soon</string>
+    <string name="music_card">Music Card</string>
 </resources>
