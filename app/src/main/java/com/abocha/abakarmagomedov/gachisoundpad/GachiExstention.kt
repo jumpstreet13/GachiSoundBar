@@ -1,8 +1,6 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
 import android.animation.ArgbEvaluator
-import android.content.Context
-import android.media.MediaPlayer
 import android.view.View
 import android.view.animation.Animation
 import android.animation.ObjectAnimator

@@ -1,4 +1,4 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator

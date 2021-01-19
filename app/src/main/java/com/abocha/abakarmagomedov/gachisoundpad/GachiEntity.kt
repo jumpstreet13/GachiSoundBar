@@ -1,15 +1,8 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
-import android.animation.ArgbEvaluator
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.media.MediaPlayer
-import android.view.View
-import android.view.animation.Animation
-import java.lang.IllegalStateException
 
 data class GachiEntity(val title: String, val rawSound: Int, var isOnRepeat: Boolean) {
 

@@ -1,4 +1,4 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

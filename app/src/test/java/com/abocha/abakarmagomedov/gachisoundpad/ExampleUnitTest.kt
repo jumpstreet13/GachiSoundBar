@@ -1,4 +1,4 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
 import org.junit.Test
 

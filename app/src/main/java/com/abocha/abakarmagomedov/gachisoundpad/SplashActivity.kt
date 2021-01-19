@@ -1,4 +1,4 @@
-package com.example.abakarmagomedov.gachisoundpad
+package com.abocha.abakarmagomedov.gachisoundpad
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
